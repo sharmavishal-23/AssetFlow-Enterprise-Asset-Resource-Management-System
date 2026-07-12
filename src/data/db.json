@@ -1,0 +1,359 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "System Admin",
+      "email": "admin@assetflow.com",
+      "password": "5f4602cc784f10046b5cf099ba75eab1a8166d38e452be9a69e523e2b540d9c992c5401170ad1fd47199d1c78b9d216d6dca48c7c00f622be2213f8edea871e1",
+      "role": "Admin",
+      "departmentId": 1,
+      "status": "Active",
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "name": "Sarah Connor",
+      "email": "manager@assetflow.com",
+      "password": "c69b6a22d9d9a64269ccb89db7d557d6305d25971bebb39a748053954402c6809536695e75108dd7a3f0ad5a54cf10a399f7406ff01959aac2730bfcaa5b8c59",
+      "role": "Asset Manager",
+      "departmentId": 1,
+      "status": "Active",
+      "createdAt": "2026-01-02T00:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "name": "John Doe",
+      "email": "head@assetflow.com",
+      "password": "683d8af57ea2d58d8e77f50064927ceeb3e4efe7c96a48d382ad845d0f02677e3b01537aabfcac288f490952e9a33d0bcd9eb6fff4ed6f420fd0b556df8a531a",
+      "role": "Department Head",
+      "departmentId": 1,
+      "status": "Active",
+      "createdAt": "2026-01-03T00:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "name": "Alice Smith",
+      "email": "employee@assetflow.com",
+      "password": "ef579f82b135fccd1d109bbb52f3cb4ae3e0f63abc2bb554cddba07fba7910572f70b6937ce78d03eed115c560f473192f67d8e4df90d6a4baa45aa6fce2bedd",
+      "role": "Employee",
+      "departmentId": 2,
+      "status": "Active",
+      "createdAt": "2026-01-04T00:00:00.000Z"
+    }
+  ],
+  "departments": [
+    {
+      "id": 1,
+      "name": "IT Infrastructure",
+      "parentId": null,
+      "managerId": 3,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "name": "Human Resources",
+      "parentId": null,
+      "managerId": null,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "name": "Operations & Facilities",
+      "parentId": null,
+      "managerId": null,
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "name": "IT Helpdesk",
+      "parentId": 1,
+      "managerId": null,
+      "createdAt": "2026-01-02T00:00:00.000Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Laptops & Workstations",
+      "code": "IT-LAP",
+      "description": "Enterprise notebooks and developer workstations",
+      "customFields": [
+        {
+          "name": "Serial Number",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "RAM (GB)",
+          "type": "number",
+          "required": true
+        },
+        {
+          "name": "Processor",
+          "type": "text",
+          "required": false
+        },
+        {
+          "name": "OS Version",
+          "type": "text",
+          "required": false
+        }
+      ],
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "name": "Office Furniture",
+      "code": "FUR-OFF",
+      "description": "Ergonomic chairs, sit-stand desks, and cabinets",
+      "customFields": [
+        {
+          "name": "Material",
+          "type": "text",
+          "required": false
+        },
+        {
+          "name": "Warranty Expiry",
+          "type": "date",
+          "required": false
+        }
+      ],
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "name": "Software Licenses",
+      "code": "SW-LIC",
+      "description": "SaaS and desktop software licenses",
+      "customFields": [
+        {
+          "name": "License Key",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "Seat Count",
+          "type": "number",
+          "required": true
+        },
+        {
+          "name": "Expiration Date",
+          "type": "date",
+          "required": true
+        }
+      ],
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    }
+  ],
+  "assets": [
+    {
+      "id": 1,
+      "tag": "AST-0001",
+      "name": "MacBook Pro 16\" M3 Max",
+      "categoryId": 1,
+      "departmentId": 1,
+      "allocatedToUserId": 4,
+      "status": "Allocated",
+      "condition": "Excellent",
+      "customFieldValues": {
+        "Serial Number": "C02F234XMD6M",
+        "RAM (GB)": "64",
+        "Processor": "M3 Max",
+        "OS Version": "macOS Sonoma"
+      },
+      "fileUploads": [],
+      "createdAt": "2026-01-05T00:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "tag": "AST-0002",
+      "name": "Dell XPS 15 9530",
+      "categoryId": 1,
+      "departmentId": 1,
+      "allocatedToUserId": null,
+      "status": "Available",
+      "condition": "Good",
+      "customFieldValues": {
+        "Serial Number": "4X98G83",
+        "RAM (GB)": "32",
+        "Processor": "Intel Core i9",
+        "OS Version": "Windows 11 Pro"
+      },
+      "fileUploads": [],
+      "createdAt": "2026-01-06T00:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "tag": "AST-0003",
+      "name": "Steelcase Gesture Chair",
+      "categoryId": 2,
+      "departmentId": 2,
+      "allocatedToUserId": null,
+      "status": "Available",
+      "condition": "Excellent",
+      "customFieldValues": {
+        "Material": "Fabric",
+        "Warranty Expiry": "2031-12-31"
+      },
+      "fileUploads": [],
+      "createdAt": "2026-01-07T00:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "tag": "AST-0004",
+      "name": "Conference Room Display 65\"",
+      "categoryId": 1,
+      "departmentId": 3,
+      "allocatedToUserId": null,
+      "status": "Under Maintenance",
+      "condition": "Fair",
+      "customFieldValues": {
+        "Serial Number": "LG-65UK6300",
+        "RAM (GB)": "2",
+        "Processor": "Quad-Core",
+        "OS Version": "webOS 4.0"
+      },
+      "fileUploads": [],
+      "createdAt": "2026-01-08T00:00:00.000Z"
+    }
+  ],
+  "transfers": [
+    {
+      "id": 1,
+      "assetId": 2,
+      "fromUserId": null,
+      "toUserId": 4,
+      "requestedByUserId": 4,
+      "departmentId": 1,
+      "status": "Pending",
+      "notes": "Need a secondary test machine for Windows compatibility testing.",
+      "createdAt": "2026-07-10T10:00:00.000Z"
+    }
+  ],
+  "bookings": [
+    {
+      "id": 1,
+      "assetId": 4,
+      "userId": 3,
+      "title": "Monthly Operations Review Meeting",
+      "startTime": "2026-07-15T09:00:00.000Z",
+      "endTime": "2026-07-15T11:00:00.000Z",
+      "status": "Confirmed",
+      "createdAt": "2026-07-11T12:00:00.000Z"
+    }
+  ],
+  "maintenance": [
+    {
+      "id": 1,
+      "assetId": 4,
+      "technicianName": "Bob Repairman",
+      "description": "Backlight flicker issue repair",
+      "cost": 150,
+      "status": "In Progress",
+      "startDate": "2026-07-11",
+      "endDate": "2026-07-14",
+      "createdAt": "2026-07-11T08:30:00.000Z"
+    }
+  ],
+  "audits": [
+    {
+      "id": 1,
+      "name": "Q3 IT Equipment Inventory Audit",
+      "startDate": "2026-07-01",
+      "endDate": "2026-07-20",
+      "auditorUserId": 2,
+      "status": "In Progress",
+      "discrepancyReport": {
+        "checkedAssets": [
+          1
+        ],
+        "missingAssets": [],
+        "damagedAssets": []
+      },
+      "createdAt": "2026-07-01T09:00:00.000Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": 1,
+      "userId": 1,
+      "title": "New Transfer Request",
+      "message": "Alice Smith requested allocation of Dell XPS 15.",
+      "read": false,
+      "createdAt": "2026-07-10T10:01:00.000Z"
+    }
+  ],
+  "activityLogs": [
+    {
+      "id": 1,
+      "userId": 1,
+      "action": "USER_REGISTER",
+      "details": "System seeded with default configuration.",
+      "timestamp": "2026-07-12T00:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "action": "USER_LOGIN",
+      "details": "Logged in successfully from IP: ::1",
+      "timestamp": "2026-07-12T07:17:26.209Z",
+      "createdAt": "2026-07-12T07:17:26.210Z"
+    },
+    {
+      "id": 3,
+      "userId": 3,
+      "action": "USER_LOGIN",
+      "details": "Logged in successfully from IP: ::1",
+      "timestamp": "2026-07-12T07:18:00.653Z",
+      "createdAt": "2026-07-12T07:18:00.653Z"
+    },
+    {
+      "id": 4,
+      "userId": 1,
+      "action": "USER_LOGIN",
+      "details": "Logged in successfully from IP: ::1",
+      "timestamp": "2026-07-12T07:20:50.098Z",
+      "createdAt": "2026-07-12T07:20:50.098Z"
+    },
+    {
+      "id": 5,
+      "userId": 2,
+      "action": "USER_LOGIN",
+      "details": "Logged in successfully from IP: ::1",
+      "timestamp": "2026-07-12T07:29:46.074Z",
+      "createdAt": "2026-07-12T07:29:46.074Z"
+    },
+    {
+      "id": 6,
+      "userId": 2,
+      "action": "USER_LOGIN",
+      "details": "Logged in successfully from IP: ::1",
+      "timestamp": "2026-07-12T07:32:37.125Z",
+      "createdAt": "2026-07-12T07:32:37.125Z"
+    },
+    {
+      "id": 7,
+      "userId": 3,
+      "action": "USER_LOGIN",
+      "details": "Logged in successfully from IP: ::1",
+      "timestamp": "2026-07-12T07:33:01.252Z",
+      "createdAt": "2026-07-12T07:33:01.252Z"
+    },
+    {
+      "id": 8,
+      "userId": 4,
+      "action": "USER_LOGIN",
+      "details": "Logged in successfully from IP: ::1",
+      "timestamp": "2026-07-12T07:33:41.718Z",
+      "createdAt": "2026-07-12T07:33:41.718Z"
+    },
+    {
+      "id": 9,
+      "userId": 4,
+      "action": "USER_LOGIN",
+      "details": "Logged in successfully from IP: ::1",
+      "timestamp": "2026-07-12T07:35:45.676Z",
+      "createdAt": "2026-07-12T07:35:45.676Z"
+    }
+  ]
+}
